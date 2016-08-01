@@ -136,7 +136,7 @@ define([
       if ($scope.panel.mode !== '-'){
         var sub_aggs = $scope.ejs.PercentilesAggregation('stats')
         .field($scope.panel.field)
-        .percents(percents);
+        .percents(percents).hdr(3);
 
         if ($scope.panel.compression!==''){
           sub_aggs.compression($scope.panel.compression);
@@ -157,7 +157,7 @@ define([
 
         var sub_aggs = $scope.ejs.PercentilesAggregation(qname)
           .field($scope.panel.field)
-          .percents(percents);
+          .percents(percents).hdr(3);
 
         if ($scope.panel.compression!==''){
           sub_aggs.compression($scope.panel.compression);
